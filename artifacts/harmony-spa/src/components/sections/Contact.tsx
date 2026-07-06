@@ -60,16 +60,28 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="h-[400px] lg:h-auto rounded-3xl overflow-hidden shadow-lg border border-border">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.08985160893!2d-84.0954009!3d9.9320857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2sSan%20Jos%C3%A9%2C%20Costa%20Rica!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen={true} 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="flex flex-col gap-4 h-full">
+            <div className="h-[400px] lg:flex-1 rounded-3xl overflow-hidden shadow-lg border border-border">
+              <iframe 
+                src="https://maps.google.com/maps?q=9.932086,-84.095401&z=16&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Harmony Spa"
+              ></iframe>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/2HG9UkJu7xvaNThh9"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-6 py-3 rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-colors text-sm"
+            >
+              <MapPin className="w-4 h-4" />
+              Ver en Google Maps
+            </a>
           </div>
 
         </div>
