@@ -3,12 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Benefits } from "@/components/sections/Benefits";
 import { Booking } from "@/components/sections/Booking";
-import { Availability } from "@/components/sections/Availability";
-import { Therapists } from "@/components/sections/Therapists";
 import { Gallery } from "@/components/sections/Gallery";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Promotions } from "@/components/sections/Promotions";
-import { FAQ } from "@/components/sections/FAQ";
 import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -22,13 +17,8 @@ export default function Home() {
         <Hero />
         <Services />
         <Benefits />
-        <Promotions />
         <Gallery />
-        <Therapists />
-        <Availability />
         <Booking />
-        <Testimonials />
-        <FAQ />
         <Blog />
         <Contact />
       </main>

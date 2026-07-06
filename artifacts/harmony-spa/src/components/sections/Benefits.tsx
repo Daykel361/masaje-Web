@@ -1,13 +1,15 @@
 import { Check } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export function Benefits() {
+  const { t } = useLanguage();
   const benefits = [
-    "Reducción profunda del estrés y la ansiedad.",
-    "Alivio de tensiones musculares crónicas.",
-    "Mejora en la circulación sanguínea y linfática.",
-    "Promoción de un sueño reparador.",
-    "Estimulación del sistema inmunológico.",
-    "Renovación de la energía vital."
+    t("benefits.1"),
+    t("benefits.2"),
+    t("benefits.3"),
+    t("benefits.4"),
+    t("benefits.5"),
+    t("benefits.6"),
   ];
 
   return (
@@ -24,10 +26,10 @@ export function Benefits() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <span className="uppercase tracking-[0.2em] text-sm font-medium mb-4 block text-secondary">El Poder del Tacto</span>
-            <h2 className="font-serif text-4xl md:text-5xl mb-8">Beneficios que transforman</h2>
+            <span className="uppercase tracking-[0.2em] text-sm font-medium mb-4 block text-secondary">{t("benefits.tag")}</span>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8">{t("benefits.title")}</h2>
             <p className="text-primary-foreground/80 text-lg mb-10 leading-relaxed">
-              Un masaje no es solo un lujo, es una inversión en tu salud integral. Nuestros tratamientos están diseñados para generar un impacto positivo y duradero en tu cuerpo y mente.
+              {t("benefits.desc")}
             </p>
             
             <ul className="space-y-4">

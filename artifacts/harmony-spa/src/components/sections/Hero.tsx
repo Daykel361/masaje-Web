@@ -1,6 +1,8 @@
 import { ArrowDown } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export function Hero() {
+  const { t } = useLanguage();
   const scrollToBooking = () => {
     document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -19,13 +21,13 @@ export function Hero() {
 
       <div className="container relative z-10 mx-auto px-6 text-center mt-12">
         <span className="text-primary-foreground/90 uppercase tracking-[0.3em] text-sm font-medium mb-6 block drop-shadow-md">
-          Un santuario de bienestar
+          {t("hero.tag")}
         </span>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-8 leading-tight drop-shadow-lg max-w-4xl mx-auto">
-          Desconecta del mundo.<br/>Reconecta contigo.
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-8 leading-tight drop-shadow-lg max-w-4xl mx-auto whitespace-pre-line">
+          {t("hero.title")}
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-          Terapias corporales y masajes especializados en un ambiente de absoluta serenidad y lujo boutique.
+          {t("hero.subtitle")}
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -33,7 +35,7 @@ export function Hero() {
             onClick={scrollToBooking}
             className="bg-primary text-primary-foreground px-10 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-xl"
           >
-            Agendar Experiencia
+            {t("hero.cta")}
           </button>
           <a 
             href="https://wa.me/50664092604" 
@@ -41,7 +43,7 @@ export function Hero() {
             rel="noreferrer"
             className="text-white hover:text-secondary transition-colors font-medium drop-shadow-md"
           >
-            Consultar por WhatsApp
+            {t("hero.whatsapp")}
           </a>
         </div>
       </div>

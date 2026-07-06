@@ -1,30 +1,32 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export function Contact() {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="py-24 bg-card border-t border-border">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           <div>
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Visítanos</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">{t("contact.title")}</h2>
             <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-              Nos encontramos en una ubicación céntrica y de fácil acceso, ideal para quienes buscan un espacio de relajación y bienestar. Nuestro centro ofrece un ambiente tranquilo, con acceso cercano a parqueo, comercios y transporte público para que tu visita sea cómoda desde el primer momento.
+              {t("contact.desc")}
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="text-primary w-6 h-6 shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium text-foreground mb-1">Ubicación</h4>
-                  <p className="text-muted-foreground">San José, Costa Rica</p>
+                  <h4 className="font-medium text-foreground mb-1">{t("contact.location")}</h4>
+                  <p className="text-muted-foreground">{t("contact.locationValue")}</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
                 <Phone className="text-primary w-6 h-6 shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium text-foreground mb-1">Teléfono</h4>
+                  <h4 className="font-medium text-foreground mb-1">{t("contact.phone")}</h4>
                   <a href="tel:+50664092604" className="text-muted-foreground hover:text-primary transition-colors">+506 6409 2604</a>
                 </div>
               </div>
@@ -32,7 +34,7 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <Mail className="text-primary w-6 h-6 shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium text-foreground mb-1">Correo Electrónico</h4>
+                  <h4 className="font-medium text-foreground mb-1">{t("contact.email")}</h4>
                   <a href="mailto:massage.xio.msg@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">massage.xio.msg@gmail.com</a>
                 </div>
               </div>
@@ -40,8 +42,8 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <Clock className="text-primary w-6 h-6 shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium text-foreground mb-1">Horario</h4>
-                  <p className="text-muted-foreground">Lunes a Domingo<br/>9:00 AM - 8:00 PM</p>
+                  <h4 className="font-medium text-foreground mb-1">{t("contact.hours")}</h4>
+                  <p className="text-muted-foreground whitespace-pre-line">{t("contact.hoursValue")}</p>
                 </div>
               </div>
             </div>
@@ -53,7 +55,7 @@ export function Contact() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-3 rounded-full font-medium hover:bg-[#128C7E] transition-colors shadow-lg"
               >
-                Escríbenos por WhatsApp
+                {t("contact.whatsappBtn")}
               </a>
             </div>
           </div>

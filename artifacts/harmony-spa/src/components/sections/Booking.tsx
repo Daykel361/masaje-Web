@@ -9,23 +9,26 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { sendReservationEmail } from "@/lib/email";
 import { services } from "@/data/services";
 import { cn } from "@/lib/utils";
-
-const bookingSchema = z.object({
-  name: z.string().min(2, "El nombre es obligatorio"),
-  phone: z.string().min(8, "El teléfono es obligatorio"),
-  email: z.string().email("Correo electrónico inválido"),
-  date: z.date({
-    required_error: "Selecciona una fecha",
-  }),
-  time: z.string().min(1, "Selecciona una hora"),
-  service: z.string().min(1, "Selecciona un servicio"),
-  guests: z.string().min(1, "Selecciona número de personas"),
-  comments: z.string().default(""),
-});
-
-type BookingFormValues = z.infer<typeof bookingSchema>;
+import { useLanguage } from "@/lib/i18n";
 
 export function Booking() {
+  const { language, t } = useLanguage();
+
+  const bookingSchema = z.object({
+    name: z.string().min(2, t("booking.required.name")),
+    phone: z.string().min(8, t("booking.required.phone")),
+    email: z.string().email(t("booking.required.email")),
+    date: z.date({
+      required_error: t("booking.required.date"),
+    }),
+    time: z.string().min(1, t("booking.required.time")),
+    service: z.string().min(1, t("booking.required.service")),
+    guests: z.string().min(1, t("booking.required.guests")),
+    comments: z.string().default(""),
+  });
+
+  type BookingFormValues = z.infer<typeof bookingSchema>;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
@@ -82,7 +85,7 @@ export function Booking() {
       form.reset();
     } catch (error) {
       console.error(error);
-      setErrorMsg("Ocurrió un error al enviar tu solicitud. Por favor intenta de nuevo o contáctanos por WhatsApp.");
+      setErrorMsg(t("booking.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -94,9 +97,9 @@ export function Booking() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           <div>
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Reserva tu momento</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">{t("booking.title")}</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Permítenos preparar un espacio de absoluta tranquilidad para ti. Selecciona tus preferencias y nos pondremos en contacto para confirmar tu cita.
+              {t("booking.subtitle")}
             </p>
             
             <div className="hidden lg:block rounded-2xl overflow-hidden shadow-lg h-64">
@@ -112,15 +115,15 @@ export function Booking() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-serif text-3xl text-foreground mb-4">Solicitud Recibida</h3>
+                <h3 className="font-serif text-3xl text-foreground mb-4">{t("booking.success.title")}</h3>
                 <p className="text-muted-foreground text-lg mb-8">
-                  Gracias por elegir Harmony Spa. Hemos recibido tu solicitud de reserva y te contactaremos en breve para confirmar los detalles.
+                  {t("booking.success.desc")}
                 </p>
                 <button 
                   onClick={() => setIsSuccess(false)}
                   className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
                 >
-                  Hacer otra reserva
+                  {t("booking.success.again")}
                 </button>
               </div>
             ) : (
@@ -134,17 +137,17 @@ export function Booking() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Nombre completo</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.name")}</label>
                     <input 
                       {...form.register("name")}
                       className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                      placeholder="Tu nombre"
+                      placeholder={t("booking.namePlaceholder")}
                     />
                     {form.formState.errors.name && <p className="text-destructive text-xs">{form.formState.errors.name.message}</p>}
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Teléfono</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.phone")}</label>
                     <input 
                       {...form.register("phone")}
                       className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
@@ -155,19 +158,19 @@ export function Booking() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Correo electrónico</label>
+                  <label className="text-sm font-medium text-foreground">{t("booking.email")}</label>
                   <input 
                     {...form.register("email")}
                     type="email"
                     className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                    placeholder="correo@ejemplo.com"
+                    placeholder={t("booking.emailPlaceholder")}
                   />
                   {form.formState.errors.email && <p className="text-destructive text-xs">{form.formState.errors.email.message}</p>}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2 flex flex-col">
-                    <label className="text-sm font-medium text-foreground">Fecha</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.date")}</label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <button
@@ -177,7 +180,7 @@ export function Booking() {
                           )}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4" />
-                          {form.watch("date") ? format(form.watch("date"), "PPP") : "Seleccionar fecha"}
+                          {form.watch("date") ? format(form.watch("date"), "PPP") : t("booking.selectDate")}
                         </button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0">
@@ -194,12 +197,12 @@ export function Booking() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Hora preferida</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.time")}</label>
                     <select 
                       {...form.register("time")}
                       className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all appearance-none"
                     >
-                      <option value="">Seleccionar hora</option>
+                      <option value="">{t("booking.selectTime")}</option>
                       <option value="09:00">09:00 AM</option>
                       <option value="10:00">10:00 AM</option>
                       <option value="11:00">11:00 AM</option>
@@ -218,41 +221,41 @@ export function Booking() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Servicio</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.service")}</label>
                     <select 
                       {...form.register("service")}
                       className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all appearance-none"
                     >
-                      <option value="">Seleccionar servicio</option>
+                      <option value="">{t("booking.selectService")}</option>
                       {services.map(s => (
-                        <option key={s.id} value={s.nameEs}>{s.nameEs}</option>
+                        <option key={s.id} value={s.nameEs}>{language === "es" ? s.nameEs : s.nameEn}</option>
                       ))}
                     </select>
                     {form.formState.errors.service && <p className="text-destructive text-xs">{form.formState.errors.service.message}</p>}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Personas</label>
+                    <label className="text-sm font-medium text-foreground">{t("booking.guests")}</label>
                     <select 
                       {...form.register("guests")}
                       className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all appearance-none"
                     >
-                      <option value="1">1 Persona</option>
-                      <option value="2">2 Personas (Pareja)</option>
-                      <option value="3">3 Personas</option>
-                      <option value="4">4+ Personas</option>
+                      <option value="1">{t("booking.guests1")}</option>
+                      <option value="2">{t("booking.guests2")}</option>
+                      <option value="3">{t("booking.guests3")}</option>
+                      <option value="4">{t("booking.guests4")}</option>
                     </select>
                     {form.formState.errors.guests && <p className="text-destructive text-xs">{form.formState.errors.guests.message}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Comentarios o necesidades especiales</label>
+                  <label className="text-sm font-medium text-foreground">{t("booking.comments")}</label>
                   <textarea 
                     {...form.register("comments")}
                     rows={3}
                     className="w-full bg-background border border-input rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
-                    placeholder="Menciona alergias, áreas de dolor, etc."
+                    placeholder={t("booking.commentsPlaceholder")}
                   />
                 </div>
 
@@ -264,10 +267,10 @@ export function Booking() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Procesando...
+                      {t("booking.submitting")}
                     </>
                   ) : (
-                    "Confirmar Reserva"
+                    t("booking.submit")
                   )}
                 </button>
               </form>
