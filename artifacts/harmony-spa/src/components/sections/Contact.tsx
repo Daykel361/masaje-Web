@@ -63,7 +63,7 @@ export function Contact() {
           <div className="flex flex-col gap-4 h-full">
             <div className="h-[400px] lg:flex-1 rounded-3xl overflow-hidden shadow-lg border border-border">
               <iframe 
-                src="https://maps.google.com/maps?q=9.932086,-84.095401&z=16&output=embed" 
+                src="https://maps.google.com/maps?q=9.929302,-84.137528&z=16&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -74,7 +74,7 @@ export function Contact() {
               ></iframe>
             </div>
             <a
-              href="https://maps.app.goo.gl/2HG9UkJu7xvaNThh9"
+              href="https://maps.google.com/maps?q=9.929302,-84.137528"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-6 py-3 rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-colors text-sm"

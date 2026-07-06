@@ -4,7 +4,6 @@ import { Services } from "@/components/sections/Services";
 import { Benefits } from "@/components/sections/Benefits";
 import { Booking } from "@/components/sections/Booking";
 import { Gallery } from "@/components/sections/Gallery";
-import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -19,7 +18,6 @@ export default function Home() {
         <Benefits />
         <Gallery />
         <Booking />
-        <Blog />
         <Contact />
       </main>
       <Footer />
