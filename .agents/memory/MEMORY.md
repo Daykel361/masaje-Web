@@ -1,0 +1,1 @@
+- [Vercel SPA config](vercel-spa-config.md) — always create vercel.json at project root for Vite SPAs from day one.
