@@ -3,30 +3,36 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-const rawPort = process.env.PORT ?? "3000";
+const rawPort = process.env.PORT ?? "5173";
 const port = Number(rawPort);
 const basePath = process.env.BASE_PATH ?? "/";
 const isReplit = process.env.REPL_ID !== undefined;
 const isProduction = process.env.NODE_ENV === "production";
 
-export default defineConfig({
+async function getReplitPlugins() {
+  if (isProduction || !isReplit) return [];
+  try {
+    const [errorModal, cartographer, devBanner] = await Promise.all([
+      import("@replit/vite-plugin-runtime-error-modal").catch(() => null),
+      import("@replit/vite-plugin-cartographer").catch(() => null),
+      import("@replit/vite-plugin-dev-banner").catch(() => null),
+    ]);
+    return [
+      errorModal ? errorModal.default() : null,
+      cartographer ? cartographer.cartographer({ root: path.resolve(import.meta.dirname, "..") }) : null,
+      devBanner ? devBanner.devBanner() : null,
+    ].filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+export default defineConfig(async () => ({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
-    ...(!isProduction && isReplit
-      ? [
-          (await import("@replit/vite-plugin-runtime-error-modal")).default(),
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer({
-              root: path.resolve(import.meta.dirname, ".."),
-            }),
-          ),
-          await import("@replit/vite-plugin-dev-banner").then((m) =>
-            m.devBanner(),
-          ),
-        ]
-      : []),
+    ...(await getReplitPlugins()),
   ],
   resolve: {
     alias: {
@@ -53,4 +59,4 @@ export default defineConfig({
     host: "0.0.0.0",
     allowedHosts: true,
   },
-});
+}));
