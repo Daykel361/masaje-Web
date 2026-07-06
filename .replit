@@ -21,3 +21,10 @@ timeoutMs = 20000
 
 [nix]
 channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+VITE_EMAILJS_PUBLIC_KEY = "4Y1myI5PXI0Fl44Hx"
+VITE_EMAILJS_SERVICE_ID = "service_2ytzz6g"
+VITE_EMAILJS_TEMPLATE_ID = "template_nc3uh7h"
