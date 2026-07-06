@@ -1,0 +1,125 @@
+ACTUALIZACIÓN DEL PROYECTO
+
+Realiza los siguientes cambios sin modificar el diseño general del sitio web. Conserva la misma estética, colores, tipografía, animaciones y estructura; únicamente reemplaza el contenido y la funcionalidad indicada.
+
+SERVICIOS
+
+Elimina todos los servicios actuales.
+
+No muestres precios ni duración de los masajes.
+
+Reemplázalos por los siguientes servicios, mostrando únicamente:
+
+Nombre en inglés
+Nombre en español
+Una descripción sencilla de una o dos líneas
+Botón "Reservar"
+Lista de servicios
+Relaxing Massage — Masaje Relajante
+Couples Massage — Masaje para Parejas
+Deep Tissue Massage — Masaje de Tejido Profundo
+Sports Massage — Masaje Deportivo
+Prenatal Massage — Masaje Prenatal
+Thai Massage — Masaje Tailandés
+Cupping Therapy — Terapia con Ventosas
+Slimming Massage — Masaje Reductor
+Hot Stones Massage — Masaje con Piedras Calientes
+Waxing — Depilación con Cera
+Lymphatic Drainage — Drenaje Linfático
+Reflexology — Reflexología
+Facial Cleansing — Limpieza Facial
+
+Genera una descripción sencilla y profesional para cada servicio.
+
+TELÉFONO
+
+Reemplaza cualquier número de teléfono por:
+
++506 6409 2604
+
+Todos los botones "Llamar" deben usar:
+
+tel:+50664092604
+
+WHATSAPP
+
+Todos los botones e íconos de WhatsApp deben abrir directamente una conversación con:
+
+https://wa.me/50664092604
+
+CORREO ELECTRÓNICO
+
+Cambia cualquier correo existente por:
+
+massage.xio.msg@gmail.com
+
+FORMULARIO DE RESERVACIONES
+
+El formulario debe funcionar realmente.
+
+No quiero una simulación.
+
+Implementa un sistema funcional utilizando EmailJS.
+
+Cuando el cliente envíe una reservación, la información debe llegar automáticamente al correo:
+
+massage.xio.msg@gmail.com
+
+Debe enviarse:
+
+Nombre
+Teléfono
+Email
+Fecha
+Hora
+Tipo de masaje
+Número de personas
+Comentarios
+
+Después del envío mostrar un mensaje de éxito elegante indicando que la solicitud fue recibida correctamente.
+
+Si EmailJS requiere configuración, deja claramente identificados:
+
+Public Key
+Service ID
+Template ID
+
+para poder reemplazarlos fácilmente después.
+
+El formulario debe incluir validaciones y mostrar mensajes de error cuando falten datos obligatorios.
+
+GOOGLE MAPS
+
+Reemplaza todas las ubicaciones actuales por la siguiente:
+
+https://maps.app.goo.gl/2HG9UkJu7xvaNThh9
+
+Utiliza el mapa embebido correspondiente.
+
+DESCRIPCIÓN DE LA UBICACIÓN
+
+Reemplaza la descripción existente por una relacionada con la nueva ubicación.
+
+Texto sugerido:
+
+"Nos encontramos en una ubicación céntrica y de fácil acceso, ideal para quienes buscan un espacio de relajación y bienestar. Nuestro centro ofrece un ambiente tranquilo, con acceso cercano a parqueo, comercios y transporte público para que tu visita sea cómoda desde el primer momento."
+
+MANTENER
+
+No cambies:
+
+Diseño
+Colores
+Tipografía
+Hero
+Animaciones
+Navbar
+Footer
+Galería
+Testimonios
+Responsive
+Estilo moderno y elegante
+
+Solo aplica los cambios solicitados.
+
+El resultado debe verse como un sitio web profesional de un spa o sala de masajes de alta calidad.

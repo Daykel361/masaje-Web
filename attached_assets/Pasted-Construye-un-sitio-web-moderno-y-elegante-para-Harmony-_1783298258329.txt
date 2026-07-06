@@ -1,0 +1,316 @@
+Construye un sitio web moderno y elegante para "Harmony Spa & Massage" - un centro de masajes especializado en relajación, bienestar y terapias corporales, donde los clientes pueden reservar citas en línea de forma rápida y sencilla.
+DISEÑO Y ESTÉTICA:
+Paleta relajante: blanco (#FFFFFF), beige (#F5E6D3), verde salvia (#A8C3A0), marrón suave (#8D6E63), dorado claro (#D4AF37)
+Tipografía elegante para títulos (Playfair Display o Cormorant Garamond)
+Tipografía moderna y limpia para textos (Poppins o Lato)
+Fotografías de alta calidad de spa, masajes, velas aromáticas, piedras calientes y ambientes relajantes
+Fondos con texturas suaves y elementos naturales
+Animaciones fluidas y delicadas
+HERO SECTION:
+Video de fondo mostrando un ambiente de spa relajante (con imagen de respaldo)
+Overlay oscuro y elegante para mejorar la legibilidad
+Headline principal:
+"RELÁJATE, RENUEVA TU ENERGÍA"
+Subtítulo:
+
+"Disfruta una experiencia de bienestar con terapeutas profesionales y agenda tu cita en segundos."
+
+Botones principales:
+Agendar cita (color principal)
+Ver masajes
+Conocer el spa
+Badges informativos:
+Más de 2,000 clientes satisfechos
+Atención profesional
+Reservas 100% en línea
+NUESTROS MASAJES
+
+Diseño en tarjetas responsivas.
+
+Los servicios serán:
+
+Relaxing Massage
+Couples Massage
+Deep Tissue Massage
+Sports Massage
+Prenatal Massage
+Thai Massage
+
+Cada tarjeta incluye:
+
+Imagen representativa
+Nombre en inglés
+Nombre en español
+Descripción breve
+Beneficios principales
+Botón:
+Reservar ahora
+
+Hover elegante con ligera ampliación y sombra.
+
+RESERVA TU CITA
+
+Sección principal del sitio.
+
+Formulario moderno con:
+
+Nombre
+Apellidos
+Correo electrónico
+Teléfono
+Tipo de masaje
+Terapeuta (opcional)
+Fecha
+Hora disponible
+Comentarios
+
+Botón grande:
+
+Confirmar cita
+
+Mostrar mensaje de éxito después de reservar.
+
+HORARIOS DISPONIBLES
+
+Calendario interactivo.
+
+Visualización:
+
+Día
+Hora
+Disponibilidad
+
+Colores:
+
+Verde = Disponible
+Amarillo = Pocas citas
+Gris = No disponible
+
+Filtros:
+
+Tipo de masaje
+Terapeuta
+Fecha
+
+Al seleccionar un horario:
+
+Abrir modal para confirmar la reserva.
+
+NUESTROS TERAPEUTAS
+
+Grid elegante.
+
+Cada terapeuta incluye:
+
+Fotografía profesional
+Nombre
+Especialidad
+Años de experiencia
+Certificaciones
+Idiomas
+
+Hover:
+
+Biografía
+Especialidades
+Redes sociales
+
+Botón:
+
+Agendar con este terapeuta
+
+BENEFICIOS DE LOS MASAJES
+
+Diseño en iconos.
+
+Beneficios:
+
+Reduce el estrés
+Alivia dolores musculares
+Mejora la circulación
+Favorece el descanso
+Relaja cuerpo y mente
+Incrementa el bienestar
+
+Cada beneficio con ilustración minimalista.
+
+GALERÍA DEL SPA
+
+Galería tipo Masonry o Slider.
+
+Mostrar fotografías de:
+
+Salas privadas
+Camas de masaje
+Aceites esenciales
+Velas aromáticas
+Área de recepción
+Sala de espera
+Ambiente zen
+
+Animaciones suaves.
+
+EXPERIENCIA DEL CLIENTE
+
+Timeline visual.
+
+Reserva tu cita
+Confirmación automática
+Llegada al spa
+Evaluación breve
+Sesión personalizada
+Recomendaciones posteriores
+
+CTA:
+
+Reserva tu experiencia
+
+PROMOCIONES
+
+Cards elegantes.
+
+Ejemplos:
+
+20% de descuento en tu primera visita
+Masaje para parejas
+Paquetes de relajación
+Bonos de regalo
+
+Mostrar:
+
+Imagen
+Título
+Descripción
+Botón "Reservar"
+
+Countdown opcional para promociones limitadas.
+
+TESTIMONIOS
+
+Carrusel moderno.
+
+Cada reseña incluye:
+
+Fotografía del cliente
+Nombre
+Calificación de cinco estrellas
+Comentario
+
+Título:
+
+Lo que opinan nuestros clientes
+
+PREGUNTAS FRECUENTES
+
+Acordeón elegante.
+
+Ejemplos:
+
+¿Debo reservar con anticipación?
+¿Qué debo llevar?
+¿Cuánto dura un masaje?
+¿Aceptan tarjetas?
+¿Puedo cancelar mi cita?
+¿Hay estacionamiento?
+BLOG DE BIENESTAR
+
+Mostrar los últimos artículos.
+
+Temas:
+
+Beneficios del masaje relajante
+Cómo reducir el estrés
+Aromaterapia
+Salud muscular
+Consejos de bienestar
+
+Cada artículo incluye:
+
+Imagen
+Título
+Resumen
+Botón "Leer más"
+CONTACTO
+
+Mapa de Google integrado.
+
+Información:
+
+Dirección
+Teléfono
+WhatsApp
+Correo electrónico
+
+Horarios:
+
+Lunes a Domingo
+
+9:00 AM - 8:00 PM
+
+Formulario rápido:
+
+Nombre
+Correo
+Mensaje
+
+Botón:
+
+Enviar
+
+FOOTER
+
+Diseño elegante con fondo oscuro.
+
+Cuatro columnas:
+
+Logo + descripción
+
+"Tu espacio para relajarte y renovar cuerpo y mente."
+
+Enlaces rápidos
+Inicio
+Masajes
+Reservar
+Promociones
+Blog
+Contacto
+Dirección
+Teléfono
+WhatsApp
+Correo
+Redes sociales
+Instagram
+Facebook
+TikTok
+
+Incluye:
+
+Copyright
+Política de privacidad
+Términos y condiciones
+CARACTERÍSTICAS TÉCNICAS
+Diseño completamente responsive
+Mobile First
+Sistema de reserva de citas integrado
+Calendario dinámico
+Confirmación automática de citas
+Integración con WhatsApp
+Integración con Google Calendar (opcional)
+Animaciones suaves
+Sticky Navigation
+Smooth Scroll
+Pantalla de carga elegante
+Botón flotante de WhatsApp
+Optimización SEO
+Excelente rendimiento (Lighthouse 95+)
+VERSIÓN MÓVIL
+Menú hamburguesa animado
+Botón "Agendar cita" siempre visible
+Botón "WhatsApp" flotante
+Calendario optimizado para pantallas táctiles
+Galería deslizable (Swipe)
+Formularios fáciles de completar
+Navegación rápida y fluida
+OBJETIVO DEL DISEÑO
+
+El sitio debe transmitir tranquilidad, lujo, confianza y bienestar. El usuario debe sentir una experiencia relajante desde el primer momento, con una interfaz elegante, imágenes de alta calidad y un proceso de agendamiento de citas sencillo, rápido y atractivo. La prioridad es facilitar la reserva en línea y generar confianza para convertir visitantes en clientes.
