@@ -17,6 +17,16 @@ export async function sendReservationEmail(data: {
     return new Promise((resolve) => setTimeout(resolve, 1000));
   }
 
+  const message = [
+    `Servicio: ${data.service}`,
+    `Fecha: ${data.date}`,
+    `Hora: ${data.time}`,
+    `Personas: ${data.guests}`,
+    `Teléfono: ${data.phone}`,
+    `Correo: ${data.email}`,
+    `Comentarios: ${data.comments || "Ninguno"}`,
+  ].join("\n");
+
   const templateParams = {
     to_email: CONTACT_EMAIL,
     from_name: data.name,
@@ -27,6 +37,7 @@ export async function sendReservationEmail(data: {
     service: data.service,
     guests: data.guests,
     comments: data.comments,
+    message,
   };
 
   return emailjs.send(
