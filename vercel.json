@@ -1,0 +1,8 @@
+{
+  "installCommand": "cd artifacts/harmony-spa && npm install",
+  "buildCommand": "cd artifacts/harmony-spa && npm run build",
+  "outputDirectory": "artifacts/harmony-spa/dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
