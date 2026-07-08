@@ -36,7 +36,7 @@ export const dict: Translations = {
   "benefits.6": { es: "Renovación de la energía vital.", en: "Renews your vital energy." },
 
   "gallery.title": { es: "Nuestro Santuario", en: "Our Sanctuary" },
-  "gallery.subtitle": { es: "Cada rincón de Harmony Spa ha sido diseñado para envolverte en una atmósfera de calma y serenidad. Descubre el espacio donde el tiempo se detiene.", en: "Every corner of Harmony Spa has been designed to wrap you in calm and serenity. Discover the space where time stands still." },
+  "gallery.subtitle": { es: "Cada rincón de Xio Masajes ha sido diseñado para envolverte en una atmósfera de calma y serenidad. Descubre el espacio donde el tiempo se detiene.", en: "Every corner of Xio Masajes has been designed to wrap you in calm and serenity. Discover the space where time stands still." },
   "gallery.img1": { es: "Instalaciones del spa", en: "Spa facilities" },
   "gallery.img2": { es: "Jardín zen", en: "Zen garden" },
   "gallery.img3": { es: "Piedras calientes", en: "Hot stones" },
@@ -72,7 +72,7 @@ export const dict: Translations = {
   "booking.title": { es: "Reserva tu momento", en: "Book your moment" },
   "booking.subtitle": { es: "Permítenos preparar un espacio de absoluta tranquilidad para ti. Selecciona tus preferencias y nos pondremos en contacto para confirmar tu cita.", en: "Let us prepare a space of absolute tranquility for you. Select your preferences and we will contact you to confirm your appointment." },
   "booking.success.title": { es: "Solicitud Recibida", en: "Request Received" },
-  "booking.success.desc": { es: "Gracias por elegir Harmony Spa. Hemos recibido tu solicitud de reserva y te contactaremos en breve para confirmar los detalles.", en: "Thank you for choosing Harmony Spa. We have received your booking request and will contact you shortly to confirm the details." },
+  "booking.success.desc": { es: "Gracias por elegir Xio Masajes. Hemos recibido tu solicitud de reserva y te contactaremos en breve para confirmar los detalles.", en: "Thank you for choosing Xio Masajes. We have received your booking request and will contact you shortly to confirm the details." },
   "booking.success.again": { es: "Hacer otra reserva", en: "Make another booking" },
   "booking.error": { es: "Ocurrió un error al enviar tu solicitud. Por favor intenta de nuevo o contáctanos por WhatsApp.", en: "There was an error sending your request. Please try again or contact us on WhatsApp." },
   "booking.name": { es: "Nombre completo", en: "Full name" },

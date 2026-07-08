@@ -70,7 +70,7 @@ export function Contact() {
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación Harmony Spa"
+                title="Ubicación Xio Masajes"
               ></iframe>
             </div>
             <a

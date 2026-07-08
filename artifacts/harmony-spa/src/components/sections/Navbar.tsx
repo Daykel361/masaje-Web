@@ -15,7 +15,7 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border transition-all duration-300">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
-          <span className="font-serif text-2xl font-semibold tracking-wide text-primary">Harmony Spa</span>
+          <span className="font-serif text-2xl font-semibold tracking-wide text-primary">Xio Masajes</span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollTo('services')} className="text-sm font-medium hover:text-primary transition-colors">{t("nav.services")}</button>
